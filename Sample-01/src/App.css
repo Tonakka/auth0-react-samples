@@ -33,3 +33,38 @@
 .result-block-container .result-block {
   opacity: 1;
 }
+
+
+.cruise-logo {
+  background-image: url("https://clipart.world/wp-content/uploads/2020/08/cruise-ship-logo-png-transparent.png");
+  width: 5rem;
+  height: 5rem;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.hero-wrapper {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-gap: 0;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  opacity: 1;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+.error-page-wrapper{
+  margin: 3em;
+  padding: 3em;
+}
+
+.error-page-btn {
+  width: 100px;
+}

@@ -6,6 +6,7 @@ import Loading from "./components/Loading";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Home from "./views/Home";
+import Error from "./views/Error";
 import Profile from "./views/Profile";
 import ExternalApi from "./views/ExternalApi";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -22,7 +23,7 @@ const App = () => {
   const { isLoading, error } = useAuth0();
 
   if (error) {
-    return <div>Oops... {error.message}</div>;
+    return <Error message={error.message} />;
   }
 
   if (isLoading) {

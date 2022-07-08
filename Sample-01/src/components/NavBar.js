@@ -39,7 +39,7 @@ const NavBar = () => {
     <div className="nav-container">
       <Navbar color="light" light expand="md">
         <Container>
-          <NavbarBrand className="logo" />
+          <NavbarBrand className="cruise-logo" />
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
@@ -53,7 +53,7 @@ const NavBar = () => {
                   Home
                 </NavLink>
               </NavItem>
-              {isAuthenticated && (
+              {isAuthenticated && false && (
                 <NavItem>
                   <NavLink
                     tag={RouterNavLink}

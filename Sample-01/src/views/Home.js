@@ -3,12 +3,18 @@ import React, { Fragment } from "react";
 import Hero from "../components/Hero";
 import Content from "../components/Content";
 
-const Home = () => (
-  <Fragment>
-    <Hero />
-    <hr />
-    <Content />
-  </Fragment>
-);
+import { useAuth0 } from "@auth0/auth0-react";
+
+const Home = () => {
+  const { isAuthenticated } = useAuth0();
+
+  return (
+    <Fragment>
+      <Hero />
+      <hr />
+      {isAuthenticated && (<Content />)}
+    </Fragment>
+  )
+};
 
 export default Home;
